@@ -76,3 +76,5 @@ This was a basic "Hello World" deployment
 | Test output verified | ![Test](./lambda-test-success.PNG)            |
 
 
+▶️ **Next Task**  
+[Task 05 → S3 Lambda Trigger](https://github.com/chandanarora/aws-saa-hands-on/tree/main/task-05-s3-lambda-trigger)
