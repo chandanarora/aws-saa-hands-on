@@ -84,8 +84,9 @@ Clicked Instance State → Terminate
 
 | Action                      | Screenshot Preview                      |
 | --------------------------- | --------------------------------------- |
-| EC2 instance launched       | ![EC2 Instance](./screenshots/ec2-instance-running.PNG)  |
-| Inbound SSH rule configured | ![Security Group](./screenshots/security-group.PNG) |
+| EC2 instance launched    | ![EC2 Instance](./ec2-instance-running.PNG) |
+| Inbound SSH rule configured | ![Security Group](./security-group.PNG)     |
+
 
 ### 🔒 Security Notes
 Key pair .pem stored securely, never committed to Git
