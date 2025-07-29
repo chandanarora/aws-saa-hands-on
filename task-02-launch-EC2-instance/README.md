@@ -1,73 +1,91 @@
-✅ Task 02: EC2 Instance Launch and SSH Access
-📌 Objective
-Launch a virtual EC2 instance (Amazon Linux 2023) and connect to it via SSH using a key pair.
+Task 02 – EC2 Instance Launch and SSH Access
+This task involved launching a virtual EC2 instance using Amazon Linux 2023 and connecting to it securely over SSH using a key pair. The instance was later terminated to avoid ongoing charges.
 
-🧰 Tools & Services
+🎯 Objective
+Launch an EC2 instance (Amazon Linux 2023)
+
+Enable SSH access using a key pair
+
+Connect via terminal (SSH or PuTTY)
+
+Terminate instance after verification
+
+🧰 Tools & Services Used
 Amazon EC2
 
-Key pair (.pem)
+Key Pair (.pem file)
 
-Security Group (port 22 open)
+Security Group (SSH port 22 open)
 
-SSH terminal or PuTTY
+SSH terminal / Git Bash / PuTTY
 
-🪜 Steps Performed
-1. Launch EC2 Instance
-Service: EC2 → Launch instance
+🪜 What I Did
+1. Launched EC2 Instance
+Service: EC2 → Launch Instance
 
 Name: saa-ec2-instance
 
 AMI: Amazon Linux 2023 (64-bit x86)
 
-Instance type: t3.micro (Free Tier eligible)
+Instance Type: t3.micro (Free Tier eligible)
 
-Key pair: saa-key.pem (generated and downloaded)
+Key Pair: saa-key.pem (downloaded at creation)
 
-Network settings:
+Network Settings:
 
-Auto-assign public IP: Enabled
+Auto-assign Public IP: ✅ Enabled
 
-Inbound rule: SSH (port 22) from My IP
+Inbound Rule: SSH (Port 22) from My IP
 
-Storage: Leave default (8 GB gp2)
+Storage: Default (8 GB gp2)
 
-Launch
+2. Updated Security Group (If Needed)
+Navigated to EC2 → Security Groups
 
-
-2. Update Security Group (If Needed)
-Go to Security Groups
-
-Edit inbound rules:
+Edited Inbound Rules:
 
 Type: SSH
 
 Source: My IP
 
-Save changes
+Saved changes
 
-📝 Take Screenshot of updated inbound rule.
-
-3. Connect via SSH
-Use a terminal (Linux/macOS) or Git Bash on Windows:
-
+3. Connected via SSH
+a. Using Git Bash / Linux / macOS Terminal:
 ssh -i "saa-key.pem" ec2-user@<EC2_PUBLIC_IP>
 
-Or, with PuTTY:
+b. Using PuTTY on Windows:
+Converted .pem to .ppk using PuTTYgen
 
-Convert .pem to .ppk using PuTTYgen
+In PuTTY:
 
 Hostname: ec2-user@<EC2_PUBLIC_IP>
 
-In PuTTY → SSH → Auth → Browse .ppk file
+SSH → Auth → Browse to .ppk file
 
-Open session
+Click Open
 
-4. Test Commands (Optional)
-Inside your EC2 terminal:
+4. Ran Test Commands
+Once connected to the instance:
 uname -a
 sudo yum update -y
 
-5. Terminate Instance
-EC2 → Select instance → Instance State → Terminate
+5. Terminated Instance
+Navigated to EC2 → Instances
 
-Confirm termination
+Selected saa-ec2-instance
+
+Instance State → Terminate
+
+| Action               | Screenshot Preview                      |
+| -------------------- | --------------------------------------- |
+| EC2 Instance Details | ![EC2 Instance](./screenshots/ec2.png)  |
+| Security Group (SSH) | ![Security Group](./screenshots/sg.png) |
+
+🔐 Notes
+SSH access was limited to my IP for security.
+
+Instance was terminated after testing to avoid charges.
+
+⏭️ Next Task
+Task 03 – S3 Bucket Public Access & Permissions
