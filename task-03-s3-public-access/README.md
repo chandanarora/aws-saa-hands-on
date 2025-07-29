@@ -76,5 +76,6 @@ S3 file successfully made public using Bucket Policy, not ACL.
 Avoid allowing public access unless absolutely necessary.
 This task is for educational/demo purposes only.
 
-⏭️ Next Task
-[Task 04 → Lambda Hello World (Trigger via Console)]
+## ⏭️ Next Task  
+[Task 04 → Lambda Hello World (Trigger via Console)](../task-04-lambda-hello-world/README.md)
+
