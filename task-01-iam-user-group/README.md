@@ -37,8 +37,7 @@ This task was about setting up the foundational IAM structure needed to securely
 
 ## 📸 Screenshots
 
-| Action                    | Screenshot Preview                             |
-|---------------------------|-----------------------------------------------|
+| Action                    | Screenshot Preview                            |
 |---------------------------|-----------------------------------------------|
 | Group with PowerUserAccess | ![](./screenshots/Group.PNG)                 |
 | MFA enabled for IAM user   | ![](./screenshots/user_mfa.PNG)              |
