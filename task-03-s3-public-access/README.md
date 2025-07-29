@@ -57,12 +57,19 @@ Successfully viewed contents in browser
 
 📸 Screenshot: text-file-public-access.png
 
-| Action                          | Screenshot Preview                 |
-| ------------------------------- | ---------------------------------- |
-| Bucket created                  | ![](./bucket-creation.png)         |
-| File uploaded                   | ![](./file-upload.png)             |
-| Public access via bucket policy | ![](./bucket-policy.png)           |
-| Verified in browser             | ![](./text-file-public-access.png) |
+## 📸 Screenshots
+
+### 🪣 Bucket created  
+![](./bucket-creation.PNG)
+
+### 📁 File uploaded  
+![](./file-upload.PNG)
+
+### 🔓 Public access via bucket policy  
+![](./bucket-policy.PNG)
+
+### 🌐 Verified in browser  
+![](./text-file-public-access.PNG)
 
 ### ✅ Outcome:
 S3 file successfully made public using Bucket Policy, not ACL.
