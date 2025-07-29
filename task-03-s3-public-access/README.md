@@ -55,8 +55,6 @@ http://saa-s3-task-chandan.s3.amazonaws.com/hello.txt
 
 Successfully viewed contents in browser
 
-📸 Screenshot: text-file-public-access.png
-
 ## 📸 Screenshots
 
 ### 🪣 Bucket created  
