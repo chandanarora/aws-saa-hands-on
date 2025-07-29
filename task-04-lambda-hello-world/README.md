@@ -1,32 +1,34 @@
 # Task 04 – Deploy a Lambda Function (Hello World)
 
 ## 🎯 Objective
-Create a basic AWS Lambda function using the AWS Management Console that returns a simple message: `"Hello from Lambda!"`
+Deploy a basic AWS Lambda function using the AWS Console that returns the message:  
+`"Hello from Lambda!"`
 
 ---
 
-## 📍 Steps Performed
+## ✅ Steps Performed
 
-### ✅ 1. Access Lambda Console
-- Open the AWS Console
-- Navigate to **Services → Lambda**
-- Click on **Create function**
+### 1. Access Lambda Console
+- Open AWS Console → **Services → Lambda**
+- Click **Create function**
 
 ---
 
-### ✅ 2. Configure the Function
+### 2. Configure the Function
 - **Author from scratch**
-  - **Function name**: `lambda-hello-world`
-  - **Runtime**: `Python 3.12`
-  - **Architecture**: `x86_64`
-  - **Permissions**: Create a new role with basic Lambda permissions  
-📸 Screenshot: `lambda-create.png`
+  - Function name: `lambda-hello-world`
+  - Runtime: `Python 3.12`
+  - Architecture: `x86_64`
+  - Permissions: Create a new role with basic Lambda permissions
+
+🖼️ Screenshot:  
+![Lambda Creation](./lambda-create.png)
 
 ---
 
-### ✅ 3. Add Function Code
+### 3. Add Code to Lambda
 
-Replaced the default code with:
+Replaced default code with:
 
 ```python
 def lambda_handler(event, context):
@@ -35,42 +37,37 @@ def lambda_handler(event, context):
         'body': 'Hello from Lambda!'
     }
 ```
+### 4. Test the Function
+Click Deploy
 
-###  📸 Screenshot: lambda-code.png
+Go to the Test tab
 
-✅ 4. Test the Function
-Click Deploy to save the changes
-
-Switch to the Test tab
-
-Create a new test event (default settings)
+Create a new test event with default template
 
 Click Test
 
-🖥️ Output:
+✅ Output:
 
 {
   "statusCode": 200,
   "body": "Hello from Lambda!"
 }
 
-### 📸 Screenshot: lambda-test-result.png
-### 🧹 5. Clean-Up
-This Lambda runs under the free tier
+### 🧹 Clean-Up
+This Lambda function runs under the free tier
 
-Can be deleted via Actions → Delete if needed
+You can delete it via Actions → Delete if no longer needed
+### 🧠 Notes
+AWS Lambda allows you to run code without provisioning servers
 
-🧠 Notes
-AWS Lambda runs code without provisioning or managing servers
+Ideal for event-driven applications and microservices
 
-Great for building serverless microservices, automation scripts, and event-driven apps
+This was a basic "Hello World" deployment
+→ Upcoming tasks will explore S3 triggers and API Gateway
 
-This was a simple "Hello World" function
-✅ Future tasks may include API Gateway triggers and S3 events
+| Action               | Screenshot                        |
+| -------------------- | --------------------------------- |
+| Function created     | ![Create](./lambda-create.png)    |
+| Code added           | ![Code](./lambda-code.png)        |
+| Test output verified | ![Test](./lambda-test-result.png) |
 
-### 🖼️ Screenshots
-🛠️ Lambda Configuration
-
-💻 Function Code
-
-🧪 Test Output
