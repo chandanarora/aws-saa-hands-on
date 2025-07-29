@@ -86,6 +86,7 @@ Clicked Instance State → Terminate
 | --------------------------- | --------------------------------------- |
 | EC2 instance launched    | ![EC2 Instance](./ec2-instance-running.PNG) |
 | Inbound SSH rule configured | ![Security Group](./security-group.PNG)     |
+| Connected via SSH          | ![](./SSH-connect-EC2.png)               |
 
 
 ### 🔒 Security Notes
