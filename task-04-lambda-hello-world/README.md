@@ -22,7 +22,9 @@ Deploy a basic AWS Lambda function using the AWS Console that returns the messag
   - Permissions: Create a new role with basic Lambda permissions
 
 🖼️ Screenshot:  
-![Lambda Creation](./lambda-create.png)
+📸 Screenshot:  
+![Lambda Creation](./lambda-create.PNG)
+
 
 ---
 
