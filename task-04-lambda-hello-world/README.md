@@ -53,7 +53,8 @@ Click Test
   "statusCode": 200,
   "body": "Hello from Lambda!"
 }
-📸 Screenshot: lambda-test-result.png
+
+### 📸 Screenshot: lambda-test-result.png
 ### 🧹 5. Clean-Up
 This Lambda runs under the free tier
 
