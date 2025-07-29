@@ -45,11 +45,12 @@ def lambda_handler(event, context):
         'statusCode': 200,
         'body': 'Success'
     }
+
 ```
 
 
 🖼️ **Screenshot:**  
-![Lambda Code](lambda-code.PNG)
+![Lambda logs](lambda-logs.PNG)
 
 ---
 
