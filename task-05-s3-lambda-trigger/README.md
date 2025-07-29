@@ -1,33 +1,43 @@
-Task 05 – AWS Lambda Triggered by S3
-📌 Goal
-Invoke a Lambda function automatically when a file is uploaded to an Amazon S3 bucket.
+# Task 05 – AWS Lambda Triggered by S3
 
-✅ Steps Performed
-1. Create an S3 Bucket
-Bucket name: saa-s3-trigger-chandan (or similar)
+## 📌 Goal
 
-Region: us-east-1
+Demonstrate how to invoke a Lambda function automatically when a file is uploaded to an Amazon S3 bucket.
 
-Created a folder named input inside the bucket (optional)
+---
 
-📸 bucket-setup.PNG
+## ✅ Steps Performed
 
-2. Create the Lambda Function
-Function name: s3-trigger-lambda
+### 1. Create an S3 Bucket
 
-Runtime: Python 3.12
+* Bucket name: `saa-s3-trigger-chandan` *(or similar)*
+* Region: `us-east-1`
+* Created a folder named `input` inside the bucket (optional).
 
-Architecture: x86_64
+🖼️ **Screenshot:**
+![Bucket Setup](bucket-setup.PNG)
 
-IAM Role with:
+---
 
-AWSLambdaBasicExecutionRole
+### 2. Create a Lambda Function
 
-AmazonS3ReadOnlyAccess (optional)
+* Runtime: **Python 3.12**
+* Function name: `s3-trigger-lambda`
+* Permissions:
 
-📸 lambda-create.PNG
+  * Lambda execution role includes:
 
-3. Add Lambda Code
+    * `AWSLambdaBasicExecutionRole`
+    * `AmazonS3ReadOnlyAccess` *(optional for reading object metadata)*
+
+🖼️ **Screenshot:**
+![Lambda Creation](lambda-create.PNG)
+
+---
+
+### 3. Add Code to Lambda
+
+```python
 def lambda_handler(event, context):
     print("Lambda triggered by S3 upload event")
     print(event)
@@ -35,40 +45,56 @@ def lambda_handler(event, context):
         'statusCode': 200,
         'body': 'Success'
     }
+```
 
-📸 lambda-code.PNG
+🖼️ **Screenshot:**
+![Lambda Code](lambda-code.PNG)
 
-4. Add S3 Trigger to Lambda
-Triggered by PUT event
+---
 
-Prefix: input/
+### 4. Add S3 Trigger to Lambda
 
-Acknowledged recursive warning
+* Triggered by: PUT event
+* Prefix: `input/`
+* Bucket: Same region as Lambda
+* Acknowledged recursive warning
 
-📸 trigger.PNG
+✅ Trigger added successfully
 
-5. Upload Test File
-Uploaded input.txt to the input/ folder in the S3 bucket
+🖼️ **Screenshot:**
+![Trigger Setup](trigger.PNG)
 
-Lambda triggered automatically
+---
 
-📸 test-upload.PNG
+### 5. Test the Trigger
 
-6. Verify in CloudWatch Logs
-Lambda was invoked
+* Uploaded a file (e.g., `input.txt`) into the `input/` folder of the bucket
+* Lambda triggered automatically
 
-Event details were printed
+🖼️ **Screenshot:**
+![Test Upload](test-upload.PNG)
 
-Duration and memory usage shown
+---
 
-📸 lam bda-logs.PNG
+### 6. Verify Logs in CloudWatch
 
-📚 Learnings
-Lambda can automatically respond to S3 events
+CloudWatch log stream confirmed:
 
-Avoid recursive triggers — don’t write to the same path that triggers the function
+* Lambda was invoked
+* Event details were printed
+* Execution duration and memory usage shown
 
-CloudWatch is essential for visibility and debugging
+🖼️ **Screenshot:**
+![Lambda Logs](lambda-logs.PNG)
 
-✅ Status
-Task completed successfully. Lambda trigger from S3 upload verified.
+---
+
+## 📚 Learnings
+
+* Lambda can automatically respond to S3 events
+* Avoid recursive triggers (don’t write output to same path that triggers Lambda)
+* CloudWatch is crucial for debugging
+
+---
+
+✅ **Status:** Completed Successfully
