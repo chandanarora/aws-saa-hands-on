@@ -70,10 +70,9 @@ Auth → Browse for .ppk
 
 ### 4. Verified Connection (Optional)
 #### Ran the following commands:
----
-uname -a
+#### uname -a
 sudo yum update -y
----
+
 
 ### 5. Terminated the Instance
 Went to EC2 Dashboard
