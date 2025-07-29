@@ -66,3 +66,30 @@ Host Name: ec2-user@<EC2_PUBLIC_IP>
 Auth → Browse for .ppk
 
 ✅ Opened SSH session
+
+
+### 4. Verified Connection (Optional)
+Ran the following commands:
+uname -a
+sudo yum update -y
+
+### 5. Terminated the Instance
+Went to EC2 Dashboard
+
+Selected instance
+
+Clicked Instance State → Terminate
+
+✅ Confirmed termination
+
+| Action                      | Screenshot Preview                      |
+| --------------------------- | --------------------------------------- |
+| EC2 instance launched       | ![EC2 Instance](./screenshots/ec2-instance-running.PNG)  |
+| Inbound SSH rule configured | ![Security Group](./screenshots/security-group.PNG) |
+
+### 🔒 Security Notes
+Key pair .pem stored securely, never committed to Git
+
+Port 22 open only to my IP
+
+Instance was terminated after verification
