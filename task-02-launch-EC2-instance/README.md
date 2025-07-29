@@ -56,7 +56,7 @@ This task involved launching a virtual machine (Amazon EC2) and connecting to it
 bash
 ssh -i "saa-key.pem" ec2-user@<EC2_PUBLIC_IP>
 
-Using PuTTY (Windows):
+### Using PuTTY (Windows):
 Converted .pem → .ppk using PuTTYgen
 
 PuTTY Settings:
