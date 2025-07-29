@@ -70,6 +70,7 @@ Auth → Browse for .ppk
 
 ### 4. Verified Connection (Optional)
 Ran the following commands:
+---
 uname -a
 sudo yum update -y
 
