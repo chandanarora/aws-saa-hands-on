@@ -1,48 +1,59 @@
 # Task 01 – IAM User and Group Setup
 
-This task sets up the foundational IAM structure to securely manage AWS access.
+This task was about setting up the foundational IAM structure needed to securely manage access to AWS services — without touching the root account again.
 
 ---
 
-## ✅ Objectives
+## 🎯 Objectives
 
-- Create an IAM Group with PowerUserAccess
-- Create an IAM User and attach to the group
-- Enable MFA for the user
-- Sign in with IAM credentials (not root)
+- Create an IAM group (`SAA_admins`) with `PowerUserAccess`
+- Create a user (`saa-user`) and add it to the group
+- Enable MFA for the IAM user
+- Log in using IAM credentials instead of root
 
 ---
 
-## 🛠️ Steps Performed
+## 🛠️ What I Did
 
-1. Created IAM Group `SAA_admins`
-2. Attached AWS managed policy: `PowerUserAccess`
-3. Created IAM user `saa-user` with:
-   - Console + programmatic access
-   - Group assignment: `SAA_admins`
-4. Enabled MFA (Virtual Authenticator App)
-5. Downloaded `.csv` with access keys
-6. Logged in successfully with MFA
+1. **Created IAM Group**
+   - Name: `SAA_admins`
+   - Attached AWS managed policy: `PowerUserAccess`
+
+2. **Created IAM User**
+   - Username: `saa-user`
+   - Enabled both console and programmatic access
+   - Assigned the user to `SAA_admins` group
+   - Downloaded the `.csv` file with access keys (for CLI)
+
+3. **Set Up MFA**
+   - Used a virtual MFA device (Google Authenticator app)
+   - Enabled and tested MFA successfully
+
+4. **Signed In**
+   - Logged into AWS Console with the IAM credentials
+   - Verified that root account was no longer needed for day-to-day use
 
 ---
 
 ## 📸 Screenshots
 
-| Action                     | Screenshot                                  |
-|---------------------------|---------------------------------------------|
-| Group with PowerUserAccess| ![Group](./screenshots/group.png)           |
-| MFA enabled for user      | ![MFA](./screenshots/user_mfa.png)          |
+| Action                    | Screenshot Preview                             |
+|---------------------------|-----------------------------------------------|
+| Group with PowerUserAccess | ![Group](screenshots/group.png)        |
+| MFA enabled for IAM user   | ![MFA](screenshots/user_mfa.png)           |
+
+*(Make sure the `screenshots` folder exists and images are committed to GitHub)*
 
 ---
 
-## 🔒 Security Notes
+## 🔐 Security Notes
 
-- Root account never used beyond setup
-- MFA enforced
-- Access keys saved securely (not hardcoded)
+- Root account was used only for initial setup
+- IAM user (`saa-user`) was secured with MFA
+- Access keys are stored securely — not hardcoded in scripts
 
 ---
 
 ## ⏭️ Next Task
 
-[Task 02 – EC2 Launch & Security Group Setup](../task-02-ec2-launch/)
+[Task 02 → EC2 Launch & SSH Access](../task-02-launch-EC2-instance/README.md)
