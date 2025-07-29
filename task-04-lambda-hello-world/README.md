@@ -65,9 +65,12 @@ Ideal for event-driven applications and microservices
 This was a basic "Hello World" deployment
 → Upcoming tasks will explore S3 triggers and API Gateway
 
-| Action               | Screenshot                        |
-| -------------------- | --------------------------------- |
-| Function created     | ![Create](./lambda-create.png)    |
-| Code added           | ![Code](./lambda-code.png)        |
-| Test output verified | ![Test](./lambda-test-result.png) |
+## 🖼️ Screenshots
+
+| Action               | Screenshot                                    |
+|----------------------|-----------------------------------------------|
+| Function created     | ![Create](./lambda-create.PNG)                |
+| Code added           | ![Code](./lambda-code.PNG)                    |
+| Test output verified | ![Test](./lambda-test-success.PNG)            |
+
 
