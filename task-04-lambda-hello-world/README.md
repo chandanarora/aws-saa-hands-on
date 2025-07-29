@@ -8,26 +8,25 @@ Create a basic AWS Lambda function using the AWS Management Console that returns
 ## 📍 Steps Performed
 
 ### ✅ 1. Access Lambda Console
-- Open the AWS Console.
-- Go to **Services → Lambda**.
-- Click on **Create function**.
+- Open the AWS Console
+- Navigate to **Services → Lambda**
+- Click on **Create function**
 
 ---
 
-### ✅ 2. Function Configuration
+### ✅ 2. Configure the Function
 - **Author from scratch**
   - **Function name**: `lambda-hello-world`
-  - **Runtime**: Python 3.12
-  - **Architecture**: x86_64
-  - **Permissions**: Create a new role with basic Lambda permissions
-
-📸 `lambda-create.png`
+  - **Runtime**: `Python 3.12`
+  - **Architecture**: `x86_64`
+  - **Permissions**: Create a new role with basic Lambda permissions  
+📸 Screenshot: `lambda-create.png`
 
 ---
 
-### ✅ 3. Function Code
+### ✅ 3. Add Function Code
 
-Replaced default code with:
+Replaced the default code with:
 
 ```python
 def lambda_handler(event, context):
@@ -35,32 +34,42 @@ def lambda_handler(event, context):
         'statusCode': 200,
         'body': 'Hello from Lambda!'
     }
+```
+
+###  📸 Screenshot: lambda-code.png
 
 ✅ 4. Test the Function
 Click Deploy to save the changes
 
-Navigate to the Test tab
+Switch to the Test tab
 
-Created a new test event with default settings
+Create a new test event (default settings)
 
-Clicked Test
+Click Test
 
-✅ Output:
+🖥️ Output:
 
 {
   "statusCode": 200,
   "body": "Hello from Lambda!"
 }
+📸 Screenshot: lambda-test-result.png
+### 🧹 5. Clean-Up
+This Lambda runs under the free tier
 
-✅ 5. Clean-Up
-This Lambda function runs under the free tier.
-
-It can be deleted later via Actions → Delete if needed.
+Can be deleted via Actions → Delete if needed
 
 🧠 Notes
-Lambda allows running code without provisioning servers.
+AWS Lambda runs code without provisioning or managing servers
 
-Ideal for serverless microservices and automation scripts.
+Great for building serverless microservices, automation scripts, and event-driven apps
 
-This was a basic "Hello World" — future tasks may include API Gateway triggers and S3 events. 
+This was a simple "Hello World" function
+✅ Future tasks may include API Gateway triggers and S3 events
 
+### 🖼️ Screenshots
+🛠️ Lambda Configuration
+
+💻 Function Code
+
+🧪 Test Output
