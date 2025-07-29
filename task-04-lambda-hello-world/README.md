@@ -21,7 +21,7 @@ Deploy a basic AWS Lambda function using the AWS Console that returns the messag
   - Architecture: `x86_64`
   - Permissions: Create a new role with basic Lambda permissions
 
-🖼️ Screenshot:  
+ 
 📸 Screenshot:  
 ![Lambda Creation](./lambda-create.PNG)
 
