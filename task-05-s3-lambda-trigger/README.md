@@ -47,11 +47,9 @@ def lambda_handler(event, context):
     }
 
 ```
-
-
 🖼️ **Screenshot:**  
 ![Lambda logs](lambda-logs.PNG)
-#### CloudWatch logs confirm successful Lambda execution after S3 upload.
+#### CloudWatch logs confirm the Lambda function was triggered and executed successfully upon S3 upload.
 ---
 
 ### 4. Add S3 Trigger to Lambda
