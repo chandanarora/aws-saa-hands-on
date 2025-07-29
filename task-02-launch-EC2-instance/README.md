@@ -96,3 +96,7 @@ Key pair .pem stored securely, never committed to Git
 Port 22 open only to my IP
 
 Instance was terminated after verification
+## ⏭️ Next Task
+
+[Task 03 → S3 Public Access & Bucket Policy](../task-03-s3-public-access/README.md)
+
