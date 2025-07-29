@@ -43,9 +43,6 @@ This task was about setting up the foundational IAM structure needed to securely
 | Group with PowerUserAccess | ![](./screenshots/Group.PNG)                 |
 | MFA enabled for IAM user   | ![](./screenshots/user_mfa.PNG)              |
 
-
-*(Make sure the `screenshots` folder exists and images are committed to GitHub)*
-
 ---
 
 ## 🔐 Security Notes
