@@ -47,7 +47,8 @@ def lambda_handler(event, context):
     }
 ```
 
-🖼️ **Screenshot:**
+
+🖼️ **Screenshot:**  
 ![Lambda Code](lambda-code.PNG)
 
 ---
