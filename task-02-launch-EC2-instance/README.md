@@ -1,91 +1,68 @@
-Task 02 – EC2 Instance Launch and SSH Access
-This task involved launching a virtual EC2 instance using Amazon Linux 2023 and connecting to it securely over SSH using a key pair. The instance was later terminated to avoid ongoing charges.
+# Task 02 – Launch EC2 Instance and Connect via SSH
 
-🎯 Objective
-Launch an EC2 instance (Amazon Linux 2023)
+This task involved launching a virtual machine (Amazon EC2) and connecting to it securely via SSH.
 
-Enable SSH access using a key pair
+---
 
-Connect via terminal (SSH or PuTTY)
+## 🎯 Objectives
 
-Terminate instance after verification
+- Launch an EC2 instance using Amazon Linux 2023
+- Generate and use a key pair for secure access
+- Configure security group to allow SSH from my IP
+- Connect to the instance using a terminal
+- Terminate instance after testing
 
-🧰 Tools & Services Used
-Amazon EC2
+---
 
-Key Pair (.pem file)
+## 🧰 Tools & Services
 
-Security Group (SSH port 22 open)
+- **Amazon EC2**
+- **Key Pair** (`.pem` file)
+- **Security Group** (port 22 open)
+- **SSH Terminal** or **PuTTY** (Windows)
 
-SSH terminal / Git Bash / PuTTY
+---
 
-🪜 What I Did
-1. Launched EC2 Instance
-Service: EC2 → Launch Instance
+## 🛠️ What I Did
 
-Name: saa-ec2-instance
+### 1. Launched EC2 Instance
 
-AMI: Amazon Linux 2023 (64-bit x86)
+- **Service**: EC2 → Launch Instance
+- **Name**: `saa-ec2-instance`
+- **AMI**: Amazon Linux 2023 (64-bit x86)
+- **Instance Type**: `t3.micro` (Free Tier)
+- **Key Pair**: `saa-key.pem` (downloaded)
+- **Network Settings**:
+  - Auto-assign Public IP: ✅ Enabled
+  - Inbound Rule: SSH (port 22) from **My IP**
+- **Storage**: 8 GB (default)
+- ✅ Clicked **Launch Instance**
 
-Instance Type: t3.micro (Free Tier eligible)
+---
 
-Key Pair: saa-key.pem (downloaded at creation)
+### 2. Updated Security Group (If Needed)
 
-Network Settings:
+- Navigated to **Security Groups**
+- Edited **Inbound Rules**:
+  - **Type**: SSH
+  - **Source**: My IP
+- ✅ Saved changes
 
-Auto-assign Public IP: ✅ Enabled
+---
 
-Inbound Rule: SSH (Port 22) from My IP
+### 3. Connected via SSH
 
-Storage: Default (8 GB gp2)
-
-2. Updated Security Group (If Needed)
-Navigated to EC2 → Security Groups
-
-Edited Inbound Rules:
-
-Type: SSH
-
-Source: My IP
-
-Saved changes
-
-3. Connected via SSH
-a. Using Git Bash / Linux / macOS Terminal:
+#### Using Terminal (Linux/macOS or Git Bash):
+bash
 ssh -i "saa-key.pem" ec2-user@<EC2_PUBLIC_IP>
 
-b. Using PuTTY on Windows:
-Converted .pem to .ppk using PuTTYgen
+Using PuTTY (Windows):
+Converted .pem → .ppk using PuTTYgen
 
-In PuTTY:
+PuTTY Settings:
 
-Hostname: ec2-user@<EC2_PUBLIC_IP>
+Host Name: ec2-user@<EC2_PUBLIC_IP>
 
-SSH → Auth → Browse to .ppk file
+Auth → Browse for .ppk
 
-Click Open
-
-4. Ran Test Commands
-Once connected to the instance:
-uname -a
-sudo yum update -y
-
-5. Terminated Instance
-Navigated to EC2 → Instances
-
-Selected saa-ec2-instance
-
-Instance State → Terminate
-
-| Action               | Screenshot Preview                      |
-| -------------------- | --------------------------------------- |
-| EC2 Instance Details | ![EC2 Instance](./screenshots/ec2.png)  |
-| Security Group (SSH) | ![Security Group](./screenshots/sg.png) |
-
-🔐 Notes
-SSH access was limited to my IP for security.
-
-Instance was terminated after testing to avoid charges.
-
-⏭️ Next Task
-Task 03 – S3 Bucket Public Access & Permissions
+✅ Opened SSH session
